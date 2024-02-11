@@ -39,4 +39,8 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: pravin1133/demo-app
+          image: pravin1133/demo-app
+      env:
+          COMPOSER_ALLOW_SUPERUSER: 1
+          run: composer install --no-interaction --prefer-dist --optimize-autoloader --verbose
+
