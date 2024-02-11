@@ -36,7 +36,11 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v2
       with:
-        context: .
-        file: ./Dockerfile
-        push: true
-        tags: pravin1133/demo-app
+          context: .
+          file: ./Dockerfile
+          push: true
+          image: pravin1133/demo-app
+      env:
+          COMPOSER_ALLOW_SUPERUSER: 1
+          run: composer install --no-interaction --prefer-dist --optimize-autoloader --verbose
+
