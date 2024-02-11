@@ -39,4 +39,4 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: pravin1133/demo-app:tagname
+        tags: pravin1133/demo-app
